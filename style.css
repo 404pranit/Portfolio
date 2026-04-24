@@ -1,5 +1,5 @@
-/* Light (default) */
-:root{
+/* Light theme (default) */
+:root {
   --bg: #ffffff;
   --text: #111827;
   --card: #f3f4f6;
@@ -7,34 +7,98 @@
   --border: #e5e7eb;
 }
 
-body{
+body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
-/* Components */
-.nav{
-  display:flex; justify-content:space-between; align-items:center;
-  padding:14px 24px; border-bottom:1px solid var(--border);
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 1px solid var(--border);
 }
-.nav a{ color: var(--text); text-decoration:none; margin:0 10px; }
 
-.hero{ text-align:center; padding:80px 20px; }
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+}
 
-.card{
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* Sections */
+.section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Grid */
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card */
+.card {
   background: var(--card);
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:16px;
-  transition: transform .2s, box-shadow .2s;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
 }
-.card:hover{ transform: translateY(-4px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
 
-.btn{
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Skills */
+.skills span {
+  margin: 10px;
+  padding: 8px 15px;
   background: var(--accent);
-  color:#fff; border:none; border-radius:6px;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.small {
+  padding: 5px 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--border);
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #1e293b;
+  --accent: #3b82f6;
+  --border: #334155;
+}  color:#fff; border:none; border-radius:6px;
   padding:10px 14px; cursor:pointer;
 }
 
