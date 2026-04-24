@@ -1,0 +1,48 @@
+/* Light (default) */
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --card: #f3f4f6;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Components */
+.nav{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 24px; border-bottom:1px solid var(--border);
+}
+.nav a{ color: var(--text); text-decoration:none; margin:0 10px; }
+
+.hero{ text-align:center; padding:80px 20px; }
+
+.card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:16px;
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover{ transform: translateY(-4px); box-shadow:0 10px 20px rgba(0,0,0,.08); }
+
+.btn{
+  background: var(--accent);
+  color:#fff; border:none; border-radius:6px;
+  padding:10px 14px; cursor:pointer;
+}
+
+/* -------- Dark mode -------- */
+body.dark{
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #1e293b;
+  --accent: #3b82f6;
+  --border: #334155;
+}
