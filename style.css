@@ -1,40 +1,93 @@
-/* Light theme (default) */
-:root {
-  --bg: #ffffff;
-  --text: #111827;
-  --card: #f3f4f6;
-  --accent: #2563eb;
-  --border: #e5e7eb;
+/* Light */
+:root{
+  --bg:#ffffff;
+  --text:#111;
+  --accent:#2563eb;
+  --card:#f3f4f6;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+body{
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  scroll-behavior:smooth;
 }
 
 /* Navbar */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  border-bottom: 1px solid var(--border);
+.nav{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  position:sticky;
+  top:0;
+  background:var(--bg);
 }
-
-.nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: var(--text);
-}
+.nav a{margin:0 10px; text-decoration:none; color:var(--text);}
 
 /* Hero */
-.hero {
-  text-align: center;
-  padding: 100px 20px;
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
+.hero span{color:var(--accent);}
 
 /* Sections */
+.section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+/* Grid */
+.grid{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* Card */
+.card{
+  background:var(--card);
+  padding:20px;
+  border-radius:10px;
+  width:250px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* Skills */
+.skills span{
+  display:inline-block;
+  margin:10px;
+  padding:10px 15px;
+  background:var(--accent);
+  color:white;
+  border-radius:5px;
+}
+
+/* Button */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 20px;
+  background:var(--accent);
+  color:white;
+  border-radius:5px;
+}
+
+/* Dark mode */
+body.dark{
+  --bg:#0f172a;
+  --text:#e5e7eb;
+  --card:#1e293b;
+  --accent:#3b82f6;
+}/* Sections */
 .section {
   text-align: center;
   padding: 50px 20px;
