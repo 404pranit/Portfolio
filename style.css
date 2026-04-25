@@ -1,40 +1,41 @@
-/* Light */
-:root{
-  --bg:#ffffff;
-  --text:#111;
-  --accent:#2563eb;
-  --card:#f3f4f6;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  scroll-behavior:smooth;
+/* Header */
+header {
+  text-align: center;
+  padding: 20px;
+  background: #f4f4f4;
 }
 
 /* Navbar */
-.nav{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 30px;
-  position:sticky;
-  top:0;
-  background:var(--bg);
+nav {
+  text-align: center;
+  padding: 10px;
+  background: #ddd;
 }
-.nav a{margin:0 10px; text-decoration:none; color:var(--text);}
 
-/* Hero */
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
 }
-.hero span{color:var(--accent);}
 
+/* Sections */
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Project */
+.project {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin
 /* Sections */
 .section{
   padding:60px 20px;
