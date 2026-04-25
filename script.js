@@ -1,40 +1,35 @@
-/* THEME */
-:root{
-  --bg:#0b1220;
-  --text:#e5e7eb;
-  --muted:#94a3b8;
-  --accent:#6366f1;
-  --card:#111827;
-  --border:#1f2937;
+// DARK MODE
+const themeBtn = document.getElementById("themeBtn");
+
+if(localStorage.getItem("theme")==="light"){
+  document.body.classList.add("light");
 }
 
-body.light{
-  --bg:#ffffff;
-  --text:#111827;
-  --muted:#4b5563;
-  --accent:#2563eb;
-  --card:#f3f4f6;
-  --border:#e5e7eb;
-}
+themeBtn.onclick = ()=>{
+  document.body.classList.toggle("light");
+  localStorage.setItem("theme",
+    document.body.classList.contains("light") ? "light" : "dark"
+  );
+};
 
-*{ box-sizing:border-box; }
-body{
-  margin:0;
-  font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  background:var(--bg);
-  color:var(--text);
-}
+// MOBILE MENU
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("navLinks");
 
-/* NAV */
-.nav{
-  position:sticky; top:0; z-index:10;
-  display:flex; justify-content:space-between; align-items:center;
-  padding:14px 22px;
-  background:rgba(0,0,0,0.3);
-  backdrop-filter: blur(8px);
-  border-bottom:1px solid var(--border);
-}
-.logo{ font-weight:700; }
+menuBtn.onclick = ()=>{
+  nav.classList.toggle("active");
+};
+
+// CONTACT FORM (mailto)
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const msg = document.getElementById("message").value;
+
+  window.location.href =
+    `mailto:your-email@gmail.com?subject=Message from ${name}&body=${msg} (${email})`;
+});.logo{ font-weight:700; }
 nav a{
   margin:0 10px;
   text-decoration:none;
